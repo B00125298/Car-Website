@@ -1,0 +1,20 @@
+-- database/schema.sql
+
+CREATE DATABASE IF NOT EXISTS second_hand_car_sales;
+
+USE second_hand_car_sales;
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL,
+  email VARCHAR(100) NOT NULL,
+  password VARCHAR(100) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS cars (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  make VARCHAR(50) NOT NULL,
+  model VARCHAR(50) NOT NULL,
+  year INT NOT NULL,
+  price DECIMAL(10, 2) NOT NULL
+);
